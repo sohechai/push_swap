@@ -6,7 +6,7 @@
 #    By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/19 14:12:19 by sohechai          #+#    #+#              #
-#    Updated: 2021/05/05 16:01:56 by sohechai         ###   ########lyon.fr    #
+#    Updated: 2021/05/06 18:27:12 by sohechai         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ HEADER 	=	./includes/pushswap.h
 SRC 	=	./main.c	\
 			./sources/pushswap/ft_init_struct.c \
 			./sources/pushswap/ft_check_errors.c \
+			./sources/pushswap/ft_pushswap.c \
+			./sources/pushswap/ft_operations.c \
 
 
 CC		=	gcc

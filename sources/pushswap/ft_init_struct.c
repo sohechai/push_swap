@@ -6,7 +6,7 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 14:19:23 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/05 17:19:32 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/06 19:36:23 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,9 @@ void				ft_fill_tab(int size, char **argv, t_stack *st)
 
 	i = 1;
 	j = 0;
-	st->tab = (int*)malloc(sizeof(int) * size - 1);
+	st->tab_a = (int*)malloc(sizeof(int) * size - 1);
 	while (argv[i] != NULL)
-	{
-		st->tab[j++] = ft_atoi(argv[i++]);
-	}
-
+		st->tab_a[j++] = ft_atoi(argv[i++]);
 }
 
 t_stack		*ft_init_struct(void)
@@ -33,9 +30,11 @@ t_stack		*ft_init_struct(void)
 
 	if (!(st = malloc(sizeof(t_stack))))
 		return (NULL);
+	st->tab_a = 0;
+	st->tab_b = (int*)malloc(sizeof(int));
 	st->size = 0;
 	st->inf = 0;
 	st->pos = 0;
-	
+
 	return (st);
 }

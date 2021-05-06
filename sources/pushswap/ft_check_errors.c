@@ -6,11 +6,18 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 15:27:02 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/05 16:03:57 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/06 17:18:03 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/pushswap.h"
+
+int		ft_isdigit_equal(int c)
+{
+	if ((c >= '0' && c <= '9') || c == '-')
+		return (1);
+	return (0);
+}
 
 int			ft_check_double(char **argv)
 {
@@ -62,7 +69,7 @@ int			ft_check_errors(char **argv)
 	{
 		while (argv[i][j] != '\0')
 		{
-			if (ft_isdigit(argv[i][j]) == 0 || argv[i][j] == '-')
+			if (ft_isdigit_equal(argv[i][j]) == 0)
 				return (0);
 			j++;
 		}
