@@ -6,11 +6,11 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 18:07:55 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/06 19:55:00 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/12 19:53:29 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/pushswap.h"
+#include "../includes/pushswap.h"
 
 void			ft_set_inf(t_stack *st)
 {
@@ -42,24 +42,26 @@ int			ft_count_len(int *tab)
 
 void		ft_pushswap(t_stack *st)
 {
-	int		i;
-
-	i = 0;
 	ft_set_inf(st);
 	st->size = ft_count_len(st->tab_a);
-	while (st->size > 3)
-	{
+	// while (st->size > 3)
+	// {
 	// 	printf("allo\n");
 	// 	if (st->pos == 1)
 			ft_push_b(st); // (push inf dans b)
+			ft_push_b(st);
+			ft_push_b(st);
+			ft_push_b(st);
+			ft_push_b(st);
 		// else
 		// 	printf("rotatea\n");
 		// rotateA; (1er element devient le dernier)
-	}
-	i = 0;
-	while (st->tab_a[i])
-		printf("tab_a = [%d]\n", st->tab_a[i++]);
-	i = 0;
-	while (st->tab_b[i])
-		printf("tab_b = [%d]\n", st->tab_b[i++]);
+	// }
+
+
+	for (int i = 0; st->tab_a[i]; i++)
+		printf("tab_a = [%d]\n", st->tab_a[i]);
+	printf("------------------\n");
+	for (int i = 0; st->tab_b[i]; i++)
+		printf("tab_b = [%d]\n", st->tab_b[i]);
 }

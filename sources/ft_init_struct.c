@@ -6,11 +6,11 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 14:19:23 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/06 19:36:23 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/12 12:38:48 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/pushswap.h"
+#include "../includes/pushswap.h"
 
 void				ft_fill_tab(int size, char **argv, t_stack *st)
 {
@@ -19,7 +19,8 @@ void				ft_fill_tab(int size, char **argv, t_stack *st)
 
 	i = 1;
 	j = 0;
-	st->tab_a = (int*)malloc(sizeof(int) * size - 1);
+	if(!(st->tab_a = (int*)malloc(sizeof(int) * size - 1)))
+		return ;
 	while (argv[i] != NULL)
 		st->tab_a[j++] = ft_atoi(argv[i++]);
 }

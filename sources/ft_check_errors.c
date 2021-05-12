@@ -6,11 +6,11 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 15:27:02 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/06 17:18:03 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/12 12:31:09 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/pushswap.h"
+#include "../includes/pushswap.h"
 
 int		ft_isdigit_equal(int c)
 {
