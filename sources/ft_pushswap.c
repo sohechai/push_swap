@@ -6,7 +6,7 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 18:07:55 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/12 19:53:29 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/16 20:13:23 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,36 +32,31 @@ void			ft_set_inf(t_stack *st)
 
 int			ft_count_len(int *tab)
 {
-	int		i;
-
-	i = 0;
-	while (tab[i])
-		i++;
-	return (i);
+	return (sizeof(tab) + 1);
 }
 
 void		ft_pushswap(t_stack *st)
 {
 	ft_set_inf(st);
-	st->size = ft_count_len(st->tab_a);
-	// while (st->size > 3)
-	// {
-	// 	printf("allo\n");
-	// 	if (st->pos == 1)
+	while (st->len_a > 3)
+	{
+		if (st->pos == 1)
 			ft_push_b(st); // (push inf dans b)
-			ft_push_b(st);
-			ft_push_b(st);
-			ft_push_b(st);
-			ft_push_b(st);
+		else
+			ft_rotate_a(st);
 		// else
-		// 	printf("rotatea\n");
-		// rotateA; (1er element devient le dernier)
-	// }
-
-
-	for (int i = 0; st->tab_a[i]; i++)
+		// 	ft_reverse_rotate_a(st);
+		ft_set_inf(st);
+	}
+	// if (st->len_a == 3)
+	// 	ft_three(st);
+	// while (ft_count_len(st->tab_b) != 0)
+	// 	ft_push_a(st);
+	printf("------------------\n");
+	for (int i = 0; i < st->len_a; i++)
 		printf("tab_a = [%d]\n", st->tab_a[i]);
 	printf("------------------\n");
-	for (int i = 0; st->tab_b[i]; i++)
+	for (int i = 0; i < st->len_b; i++)
 		printf("tab_b = [%d]\n", st->tab_b[i]);
+	printf("------------------\n");
 }

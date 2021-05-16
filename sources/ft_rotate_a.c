@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_rotate_a.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/22 17:21:49 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/12 23:36:38 by sohechai         ###   ########lyon.fr   */
+/*   Created: 2021/05/16 14:54:20 by sohechai          #+#    #+#             */
+/*   Updated: 2021/05/16 20:14:04 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/pushswap.h"
+#include "../includes/pushswap.h"
 
-int			main(int argc, char **argv)
+void		ft_rotate_a(t_stack *st)
 {
-	t_stack	*st;
+	int		*tmp_tab_a;
+	int		i;
+	int		j;
 
-	if (argc <= 1)
-		return (0);
-	else if (ft_check_errors(argv) == 0)
-	{
-		dprintf(1, "Error\n");
-		return (0);
-	}
-	if (!(st = ft_init_struct()))
-	{
-		printf("Failed allocate memory to structure\n");
-		return (0);
-	}
-	ft_fill_tab(argc, argv, st);
-	ft_pushswap(st);
-
-	return (0);
+	i = 1;
+	j = 0;
+	if (st->tab_a[0] == 0)
+		return ;
+	if(!(tmp_tab_a = ft_calloc(st->len_a, sizeof(int*))))
+		return ;
+	while (st->tab_a[i])
+		tmp_tab_a[j++] = st->tab_a[i++];
+	tmp_tab_a[j] = st->tab_a[0];
+	free(st->tab_a);
+	st->tab_a = ft_copytab(0, tmp_tab_a);
+	printf("ra\n");
 }
