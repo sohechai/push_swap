@@ -6,7 +6,7 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 16:31:38 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/16 16:41:54 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/16 22:19:16 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ void		ft_three(t_stack *st)
 		ft_swap_a(st);
 		ft_rotate_a(st);
 	}
-	else
+	else if (a < b && b > c && a > c)
 		ft_reverse_rotate_a(st);
 }
