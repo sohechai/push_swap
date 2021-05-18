@@ -6,7 +6,7 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 14:19:23 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/16 22:32:31 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/18 20:48:54 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@ t_stack		*ft_init_struct(void)
 	st->tab_a = 0;
 	st->tab_b = (int*)malloc(sizeof(int));
 	st->inf = 0;
+	st->sup = 0;
+	st->size = 1;
+	st->part_i = 0;
+	st->part_s = 0;
+	st->save_first = 0;
+	st->save_second = 0;
 	st->pos = 1;
 	st->len_a = 0;
 	st->len_b = 0;

@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap_a.c                                        :+:      :+:    :+:   */
+/*   ft_rotate_b.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/16 16:39:01 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/16 22:13:03 by sohechai         ###   ########lyon.fr   */
+/*   Created: 2021/05/18 12:38:12 by sohechai          #+#    #+#             */
+/*   Updated: 2021/05/18 12:42:31 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/pushswap.h"
+#include "../../includes/pushswap.h"
 
-void		ft_swap_a(t_stack *st)
+void		ft_rotate_b(t_stack *st)
 {
-	int		*tmp_tab_a;
+	int		*tmp_tab_b;
 	int		i;
+	int		j;
 
-	i = 2;
-	if (st->len_a == 0)
+	i = 1;
+	j = 0;
+	if (st->len_b == 0)
 		return ;
-	if(!(tmp_tab_a = ft_calloc(st->len_a, sizeof(int*))))
+	if(!(tmp_tab_b = ft_calloc(st->len_b, sizeof(int*))))
 		return ;
-	tmp_tab_a[0] = st->tab_a[1];
-	tmp_tab_a[1] = st->tab_a[0];
-	while (i < st->len_a)
-	{
-		tmp_tab_a[i] = st->tab_a[i];
-		i++;
-	}
-	free(st->tab_a);
-	st->tab_a = ft_copytab(0, st->len_a, tmp_tab_a);
-	printf("sa\n");
+	while (j < st->len_b - 1)
+		tmp_tab_b[j++] = st->tab_b[i++];
+	tmp_tab_b[j] = st->tab_b[0];
+	free(st->tab_b);
+	st->tab_b = ft_copytab(0, st->len_b, tmp_tab_b);
+	printf("rb\n");
 }

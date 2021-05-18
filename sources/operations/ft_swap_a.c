@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_sort.c                                       :+:      :+:    :+:   */
+/*   ft_swap_a.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/16 22:35:44 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/18 20:48:59 by sohechai         ###   ########lyon.fr   */
+/*   Created: 2021/05/16 16:39:01 by sohechai          #+#    #+#             */
+/*   Updated: 2021/05/18 12:42:31 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/pushswap.h"
+#include "../../includes/pushswap.h"
 
-int			ft_is_sort(t_stack *st)
+void		ft_swap_a(t_stack *st)
 {
+	int		*tmp_tab_a;
 	int		i;
-	int		j;
 
-	i = 0;
-	j = 0;
-	while (i < st->len_a && (i + 1) < st->len_a)
+	i = 2;
+	if (st->len_a == 0)
+		return ;
+	if(!(tmp_tab_a = ft_calloc(st->len_a, sizeof(int*))))
+		return ;
+	tmp_tab_a[0] = st->tab_a[1];
+	tmp_tab_a[1] = st->tab_a[0];
+	while (i < st->len_a)
 	{
-		if (st->tab_a[i] < st->tab_a[i + 1])
-			j++;
+		tmp_tab_a[i] = st->tab_a[i];
 		i++;
 	}
-	if (j + 1 == st->len_a)
-		return (-1);
-	return (0);
+	free(st->tab_a);
+	st->tab_a = ft_copytab(0, st->len_a, tmp_tab_a);
+	printf("sa\n");
 }

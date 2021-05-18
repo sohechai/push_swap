@@ -6,7 +6,7 @@
 #    By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/19 14:12:19 by sohechai          #+#    #+#              #
-#    Updated: 2021/05/16 22:38:01 by sohechai         ###   ########lyon.fr    #
+#    Updated: 2021/05/18 20:46:55 by sohechai         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,21 +15,24 @@ NAME 	=	push_swap
 HEADER 	=	./includes/pushswap.h
 
 SRC 	=	./main.c	\
+			./sources/operations/ft_push_b.c \
+			./sources/operations/ft_rotate_a.c \
+			./sources/operations/ft_rotate_b.c \
+			./sources/operations/ft_swap_a.c \
+			./sources/operations/ft_push_a.c \
+			./sources/operations/ft_reverse_rotate_a.c \
+			./sources/operations/ft_reverse_rotate_b.c \
+			./sources/ft_classic_pushswap.c \
 			./sources/ft_init_struct.c \
 			./sources/ft_check_errors.c \
 			./sources/ft_pushswap.c \
-			./sources/ft_push_b.c \
-			./sources/ft_rotate_a.c \
-			./sources/ft_reverse_rotate_a.c \
 			./sources/ft_three.c \
-			./sources/ft_swap_a.c \
-			./sources/ft_push_a.c \
 			./sources/ft_is_sort.c \
 
 
 CC		=	gcc
 
-FLAGS 	=	-Wall -Wextra -Werror
+FLAGS 	=	-Wall -Wextra -Werror #-fsanitize=address -g3
 
 OBJ		= 	$(SRC:.c=.o)
 
