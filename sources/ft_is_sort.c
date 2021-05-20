@@ -6,13 +6,13 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 22:35:44 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/18 20:48:59 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/20 15:55:49 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/pushswap.h"
 
-int			ft_is_sort(t_stack *st)
+int	ft_is_sort(t_stack *st)
 {
 	int		i;
 	int		j;

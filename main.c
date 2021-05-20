@@ -6,24 +6,20 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 17:21:49 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/18 20:41:25 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/20 16:14:52 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/pushswap.h"
 
-int			main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_stack	*st;
 
-	if (argc <= 1)
+	if (ft_check_errors(argv, argc) == 0)
 		return (0);
-	else if (ft_check_errors(argv) == 0)
-	{
-		dprintf(1, "Error\n");
-		return (0);
-	}
-	if (!(st = ft_init_struct()))
+	st = ft_init_struct();
+	if (!(st))
 	{
 		printf("Failed allocate memory to structure\n");
 		return (0);
@@ -42,6 +38,5 @@ int			main(int argc, char **argv)
 	}
 	else
 		ft_classic_pushswap(st);
-		// ft_classique push swap
 	return (0);
 }

@@ -6,22 +6,22 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 16:44:06 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/18 20:48:49 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/20 15:35:43 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/pushswap.h"
 
-void		ft_push_a(t_stack *st)
+void	ft_push_a(t_stack *st)
 {
-	int		*tmp_tab_a = NULL;
-	int		*tmp_tab_b = NULL;
+	int		*tmp_tab_a;
+	int		*tmp_tab_b;
 
-//	cpy 1 er pile a dans pile b + rajoute pile b a la suite avec malloc free etc;
+	tmp_tab_a = NULL;
+	tmp_tab_b = NULL;
 	if (st->len_b == 0)
 		return ;
 	tmp_tab_a = ft_intjoin(st->tab_b[0], st->len_a, st->tab_a);
-//	cpy de tab a sans le 1 er de la pile;
 	if (st->len_b != 1)
 	{
 		tmp_tab_b = ft_copytab(1, st->len_b, st->tab_b);

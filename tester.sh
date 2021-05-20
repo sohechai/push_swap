@@ -14,10 +14,10 @@ ARG10="33 4 5 9 6 2 1 99 40 92"
 
 # ./push_swap $ARG100 | ./checker $ARG100
 
-printf("------------------\n");
-for (int i = 0; i < st->len_a; i++)
-	printf("tab_a[%d] = [%d]\n", i, st->tab_a[i]);
-printf("------------------\n");
-for (int i = 0; i < st->len_b; i++)
-	printf("tab_b[%d] = [%d]\n", i, st->tab_b[i]);
-printf("------------------\n");
+#printf("------------------\n");
+#for (int i = 0; i < st->len_a; i++)
+#	printf("tab_a[%d] = [%d]\n", i, st->tab_a[i]);
+#printf("------------------\n");
+# for (int i = 0; i < st->len_b; i++)
+# 	printf("tab_b[%d] = [%d]\n", i, st->tab_b[i]);
+# printf("------------------\n");

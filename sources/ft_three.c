@@ -6,13 +6,13 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 16:31:38 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/18 20:49:15 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/20 16:04:32 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/pushswap.h"
 
-void		ft_three(t_stack *st)
+void	ft_three(t_stack *st)
 {
 	int		a;
 	int		b;

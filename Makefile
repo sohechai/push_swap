@@ -6,7 +6,7 @@
 #    By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/19 14:12:19 by sohechai          #+#    #+#              #
-#    Updated: 2021/05/18 20:46:55 by sohechai         ###   ########lyon.fr    #
+#    Updated: 2021/05/20 17:04:13 by sohechai         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,8 @@ SRC 	=	./main.c	\
 			./sources/ft_pushswap.c \
 			./sources/ft_three.c \
 			./sources/ft_is_sort.c \
+			./sources/ft_tools.c \
+			./sources/ft_moove_a.c \
 
 
 CC		=	gcc

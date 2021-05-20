@@ -6,13 +6,13 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 12:39:10 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/18 19:40:00 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/20 16:17:41 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/pushswap.h"
 
-void		ft_reverse_rotate_b(t_stack *st)
+void	ft_reverse_rotate_b(t_stack *st)
 {
 	int		*tmp_tab_b;
 	int		len;
@@ -24,7 +24,8 @@ void		ft_reverse_rotate_b(t_stack *st)
 	j = 1;
 	if (st->len_b == 0)
 		return ;
-	if(!(tmp_tab_b = ft_calloc(len, sizeof(int*))))
+	tmp_tab_b = ft_calloc (len, sizeof(int *));
+	if (!(tmp_tab_b))
 		return ;
 	tmp_tab_b[0] = st->tab_b[len];
 	while (j <= len)
