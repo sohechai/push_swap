@@ -6,7 +6,7 @@
 #    By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/19 14:12:19 by sohechai          #+#    #+#              #
-#    Updated: 2021/05/20 17:04:13 by sohechai         ###   ########lyon.fr    #
+#    Updated: 2021/05/21 13:18:08 by sohechai         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ $(NAME): 	$(OBJ)
 			@make  -C libft
 			@$(CC) $(FLAGS) $(OBJ) -I $(HEADER) $(LIB) -o $(NAME)
 
-			@printf "\33[2K\r\033[0;31;5;110m[$(NAME)] is ready to be executed\033[37m\n"
+			@printf "\033[2K\033[0;38;5;121m\n[$(NAME)] is ready to be executed\033[37m\n"
 
 %.o: %.c $(HEADER)
 			@$(CC) $(FLAGS) -c $< -o $@ -I includes

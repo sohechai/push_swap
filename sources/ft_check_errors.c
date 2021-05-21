@@ -6,7 +6,7 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 15:27:02 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/20 16:19:12 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/21 14:49:35 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_check_double(char **argv)
 		{
 			if (ft_strcmp(argv[i], argv[j]) == 0)
 			{
-				dprintf(1, "Error\n");
+				printf("Error\n");
 				return (0);
 			}
 			j++;
@@ -53,13 +53,13 @@ int	ft_check_int_max(char **argv)
 		{
 			if (ft_strncmp(argv[i], "2147483647", 10) > 0)
 			{
-				dprintf(1, "Error\n");
+				printf("Error\n");
 				return (0);
 			}
 		}
 		else if (ft_strlen(argv[i]) > 10)
 		{
-			dprintf(1, "Error\n");
+			printf("Error\n");
 			return (0);
 		}
 		i++;
@@ -76,7 +76,7 @@ int	ft_check_errors(char **argv, int argc)
 	j = 0;
 	if (argc <= 1)
 	{
-		dprintf(1, "Error\n");
+		printf("Error\n");
 		return (0);
 	}
 	while (argv[i] != NULL)
@@ -85,7 +85,7 @@ int	ft_check_errors(char **argv, int argc)
 		{
 			if (ft_isdigit_equal(argv[i][j]) == 0)
 			{
-				dprintf(1, "Error\n");
+				printf("Error\n");
 				return (0);
 			}
 			j++;

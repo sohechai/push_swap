@@ -6,7 +6,7 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 15:36:18 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/20 16:17:18 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/21 14:54:05 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ void	ft_reverse_rotate_a(t_stack *st)
 		tmp_tab_a[j++] = st->tab_a[i++];
 	free(st->tab_a);
 	st->tab_a = ft_copytab(0, st->len_a, tmp_tab_a);
+	free(tmp_tab_a);
 	printf("rra\n");
 }

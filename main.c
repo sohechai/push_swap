@@ -6,7 +6,7 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 17:21:49 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/20 16:14:52 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/21 15:01:50 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,7 @@ int	main(int argc, char **argv)
 		return (0);
 	st = ft_init_struct();
 	if (!(st))
-	{
-		printf("Failed allocate memory to structure\n");
 		return (0);
-	}
 	ft_fill_tab(argc, argv, st);
 	if (ft_is_sort(st) == -1)
 		return (0);
@@ -38,5 +35,8 @@ int	main(int argc, char **argv)
 	}
 	else
 		ft_classic_pushswap(st);
+	free(st->tab_a);
+	free(st->tab_b);
+	free(st);
 	return (0);
 }
