@@ -6,7 +6,7 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 15:57:10 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/20 15:57:29 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/21 18:49:19 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	ft_set_len(t_stack *st)
 	if (st->size == 1)
 		len = (st->sup - st->inf) / 5;
 	else
-		len = (st->sup - st->inf) / 11;
+		len = (st->sup - st->inf) / 9;
 	return (len);
 }
 

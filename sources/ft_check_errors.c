@@ -6,7 +6,7 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 15:27:02 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/21 14:49:35 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/21 18:56:14 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	ft_check_int_max(char **argv)
 	{
 		if (ft_strlen(argv[i]) == 10)
 		{
-			if (ft_strncmp(argv[i], "2147483647", 10) > 0)
+			if (ft_strncmp(argv[i], "2147483647", 10) == 0)
 			{
 				printf("Error\n");
 				return (0);
@@ -72,18 +72,19 @@ int	ft_check_errors(char **argv, int argc)
 	int			i;
 	int			j;
 
-	i = 1;
+	i = 0;
 	j = 0;
 	if (argc <= 1)
 	{
 		printf("Error\n");
 		return (0);
 	}
-	while (argv[i] != NULL)
+	while (argv[++i] != NULL)
 	{
 		while (argv[i][j] != '\0')
 		{
-			if (ft_isdigit_equal(argv[i][j]) == 0)
+			if (ft_isdigit_equal(argv[i][j]) == 0 || (argv[i][j] == '-'
+				&& !ft_isdigit(argv[i][j + 1])))
 			{
 				printf("Error\n");
 				return (0);
@@ -91,7 +92,6 @@ int	ft_check_errors(char **argv, int argc)
 			j++;
 		}
 		j = 0;
-		i++;
 	}
 	return (ft_check_int_max(argv));
 }

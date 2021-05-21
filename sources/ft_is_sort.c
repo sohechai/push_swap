@@ -6,7 +6,7 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/16 22:35:44 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/20 15:55:49 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/21 18:53:59 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ int	ft_is_sort(t_stack *st)
 		i++;
 	}
 	if (j + 1 == st->len_a)
+	{
+		free(st->tab_a);
+		free(st->tab_b);
+		free(st);
 		return (-1);
+	}
 	return (0);
 }
