@@ -6,7 +6,7 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 15:27:02 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/21 18:56:14 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/26 17:07:40 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,7 @@ int	ft_check_errors(char **argv, int argc)
 	i = 0;
 	j = 0;
 	if (argc <= 1)
-	{
-		printf("Error\n");
 		return (0);
-	}
 	while (argv[++i] != NULL)
 	{
 		while (argv[i][j] != '\0')
