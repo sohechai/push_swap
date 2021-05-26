@@ -6,7 +6,7 @@
 /*   By: sohechai <sohechai@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 20:35:14 by sohechai          #+#    #+#             */
-/*   Updated: 2021/05/20 17:10:48 by sohechai         ###   ########lyon.fr   */
+/*   Updated: 2021/05/26 17:06:05 by sohechai         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,6 @@ void	ft_classic_pushswap(t_stack *st)
 		ft_three(st);
 	while (st->len_b >= 1)
 		ft_push_a(st);
+	if (st->len_a == 2 && ft_is_sort(st) != -1)
+		ft_rotate_a(st);
 }
